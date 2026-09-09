@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+    --bg-root: #0B0F19;
+    --bg-drawer: #0F172A;
+    --bg-card: #1C2230;
+    --bg-card-alt: #1E293B;
+    --bg-dark: #111827;
+    --bg-darker: #131722;
+    
+    --text-primary: #FFFFFF;
+    --text-secondary: #94A3B8;
+    --text-light: #cbd5e1;
+    
+    --primary: #6366F1;
+    --primary-hover: #4F46E5;
+    --primary-dark: #7C3AED;
+    --primary-light: #8B5CF6;
+    
+    --border-light: rgba(255, 255, 255, 0.05);
+    --border-main: rgba(255, 255, 255, 0.1);
+    --border-strong: rgba(255, 255, 255, 0.2);
+    --border-extra: rgba(255, 255, 255, 0.3);
+    
+    --overlay-light: rgba(30, 41, 59, 0.5);
+    --overlay-medium: rgba(30, 41, 59, 0.6);
+    --overlay-strong: rgba(30, 41, 59, 0.8);
+    --overlay-dark: rgba(15, 23, 42, 0.8);
+    
+    --shadow-light: rgba(0, 0, 0, 0.2);
+    --shadow-medium: rgba(0, 0, 0, 0.3);
+    --shadow-strong: rgba(0, 0, 0, 0.5);
+}
+
+.light {
+    --color-scheme: light;
+    --bg-root: linear-gradient(135deg, #F4F7FF 0%, #FFFFFF 100%);
+    --bg-drawer: rgba(255, 255, 255, 0.7);
+    --bg-card: #FFFFFF;
+    --bg-card-alt: #F4F6FF;
+    --bg-dark: #EEF2FA;
+    --bg-darker: #E5E9F5;
+
+    --text-primary: #1E2235;
+    --text-secondary: #6B7280;
+    --text-light: #9CA3AF;
+
+    --primary: #5F5CFF;
+    --primary-hover: #4C49E6;
+    --primary-dark: #3730A3;
+    --primary-light: #8A88FF;
+
+    --border-light: rgba(0, 0, 0, 0.08);
+    --border-main: rgba(0, 0, 0, 0.12);
+    --border-strong: rgba(0, 0, 0, 0.2);
+    --border-extra: rgba(0, 0, 0, 0.3);
+
+    --overlay-light: rgba(244, 247, 255, 0.7);
+    --overlay-medium: rgba(244, 247, 255, 0.85);
+    --overlay-strong: rgba(255, 255, 255, 0.95);
+    --overlay-dark: rgba(30, 34, 53, 0.8);
+
+    --shadow-light: rgba(30, 34, 53, 0.03);
+    --shadow-medium: rgba(30, 34, 53, 0.06);
+    --shadow-strong: rgba(30, 34, 53, 0.1);
+}
+
+body {
+  font-family: var(--font-primary), 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-root);
+  background-attachment: fixed;
+  color: var(--text-primary);
+}
+
+/* Custom Scrollbar Globally */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-main);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-main) transparent;
+}
