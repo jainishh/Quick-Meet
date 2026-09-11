@@ -14,19 +14,19 @@ export default function Signup() {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        const checkExistingAuth = async () => {
-            try {
-                const res = await axiosInstance.get('/api/v1/users/check_auth');
-                if (res.data.authenticated) {
-                    navigate('/dashboard');
-                }
-            } catch (err) {
-                // Not authenticated, stay on signup
-            }
-        };
-        checkExistingAuth();
-    }, [navigate]);
+    // useEffect(() => {
+    //     const checkExistingAuth = async () => {
+    //         try {
+    //             const res = await axiosInstance.get('/api/v1/users/check_auth');
+    //             if (res.data.authenticated) {
+    //                 navigate('/dashboard');
+    //             }
+    //         } catch (err) {
+    //             // Not authenticated, stay on signup
+    //         }
+    //     };
+    //     checkExistingAuth();
+    // }, [navigate]);
 
     const handleSignup = async (e) => {
         e.preventDefault();
