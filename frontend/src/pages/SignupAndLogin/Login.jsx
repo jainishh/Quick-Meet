@@ -13,19 +13,19 @@ export default function Login() {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        const checkExistingAuth = async () => {
-            try {
-                const res = await axiosInstance.get('/api/v1/users/check_auth');
-                if (res.data.authenticated) {
-                    navigate('/dashboard');
-                }
-            } catch (err) {
-                // Not authenticated, stay on login
-            }
-        };
-        checkExistingAuth();
-    }, [navigate]);
+    // useEffect(() => {
+    //     const checkExistingAuth = async () => {
+    //         try {
+    //             const res = await axiosInstance.get('/api/v1/users/check_auth');
+    //             if (res.data.authenticated) {
+    //                 navigate('/dashboard');
+    //             }
+    //         } catch (err) {
+    //             // Not authenticated, stay on login
+    //         }
+    //     };
+    //     checkExistingAuth();
+    // }, [navigate]);
 
     const handleLogin = async (e) => {
         e.preventDefault();
